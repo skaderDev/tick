@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;  // Changed from Long to Integer
     
     @Column(nullable = false)
     private String ticker;
@@ -18,9 +18,11 @@ public class Stock {
     @Column(nullable = false)
     private LocalDate date;
     
-    private double open;
-    private double high;
-    private double low;
-    private double close;
-    private long volume;
+    private Double open;
+    private Double high;
+    private Double low;
+    private Double close;
+    private Long volume;
+    private Double sma20;
+    private Double rsi;
 }
